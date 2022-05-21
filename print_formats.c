@@ -30,6 +30,18 @@ count += prnt_f[j].f(args);
 break;
 }
 }
+if (prnt_f[j].c == NULL && format[i + 1] != ' ')
+{
+if (format[i + 1] != '\0')
+{
+count += _putchar(format[i]);
+count += _putchar(format[i + 1]);
+}
+else
+{
+return (-1);
+}
+}
 i += 1;
 }
 else
