@@ -26,7 +26,7 @@ int i;
 char *s = va_arg(args, char *);
 if (s == NULL)
 {
-s = "(nil)";
+s = "(null)";
 }
 i = 0;
 while (s[i] != '\0')
