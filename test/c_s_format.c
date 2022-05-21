@@ -22,9 +22,12 @@ return (write(1, &c, 1));
 */
 int _putstr(va_list args)
 {
-int len;
+int i;
 char *s = va_arg(args, char *);
-len = get_len(s);
-
-return (write(1, s, len));
+i = 0;
+while (s[i] != '\0')
+{
+i += _putchar(s[i]);
+}
+return (i);
 }
