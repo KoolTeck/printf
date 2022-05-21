@@ -17,6 +17,10 @@ prnt_fmt prnt_f[] = {
 {"%", _putper},
 {NULL, NULL},
 };
+if (format == NULL)
+{
+return (-1);
+}
 va_start(args, format);
 count = 0;
 count = prnt_format(prnt_f, format, args);
