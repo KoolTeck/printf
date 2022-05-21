@@ -11,32 +11,30 @@
 */
 int prnt_format(struct prnt prnt_f[], const char *format, va_list args)
 {
-int count = 0, i = 0, j, len;
-char nex;
-len = get_len(format);
-for (; i < len; i++)
+int count = 0, i = 0, j;
+
+for (i = 0; format[i] != '\0'; i++)
 {
-if (format[i] != '%')
+if (format[i] == '%')
 {
-count += _putchar(format[i]);
-continue;
+for (j = 0; prnt_f[j].c != NULL; j++)
+{
+if (format[i + 1] == '%')
+{
+count += _putchar('%');
+break;
 }
-i++;
-nex = format[i++];
-if (nex == '%')
-{
-count += _putchar(nex);
-}
-for (j = 0; j < 3; j++)
-{
-if (nex == prnt_f[j].c)
+if (format[i + 1] == prnt_f[j].c[0])
 {
 count += prnt_f[j].f(args);
+break;
 }
-if (nex != prnt_f[j].c)
+}
+i += 1;
+}
+else
 {
-count += _putchar(format[i++]);
-}
+count += _putchar(format[i]);
 }
 }
 return (count);

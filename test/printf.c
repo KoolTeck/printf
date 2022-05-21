@@ -12,9 +12,10 @@ int _printf(const char *format, ...)
 int count;
 va_list args;
 prnt_fmt prnt_f[] = {
-{'c', _putarg_char},
-{'s', _putstr},
-{'\0', NULL},
+{"c", _putarg_char},
+{"s", _putstr},
+{"%", _putper},
+{NULL, NULL},
 };
 va_start(args, format);
 count = 0;

@@ -8,13 +8,12 @@
 int main(void)
 {
 int len1, len2;
-len1 = _printf("Let's try to printf a simple sentence.%%\n");
-len2 = printf("Let's  try to printf a simple sentence.%%\n");
-len1 = _printf("Character:[%c]\ng", 'H');
-len2 =  printf("Character:[%c]\n", 'H');
-len1 =   _printf("String:[%s]\n", "I am a string !");
-len2 = printf("String:[%s]\n", "I am a string !");
-printf("\n%d %d", len1, len2);
-
+len1 = _printf("Let's try to printf a simple %% sentenc%%.\n");
+len2 = printf("Let's try to printf a simple %% sentenc%%.\n");
+len1 = _printf("Character%%:[%c] %c\n", 'H', 'c');
+len2 =  printf("Character%%:[%c] %c\n", 'H', 'c');
+len1 =   _printf("%s String%%:[%s]\n", "I am a string !", "hello");
+len2 = printf("%s String%%:[%s]\n", "I am a string !","hello");
+printf("\n%d %d",len1, len2);
 return (0);
 }

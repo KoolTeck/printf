@@ -13,7 +13,7 @@
 */
 typedef struct prnt
 {
-char c;
+char *c;
 int (*f)(va_list);
 } prnt_fmt;
 int _printf(const char *format, ...);
@@ -21,5 +21,6 @@ int prnt_format(struct prnt prnt_f[], const char *format, va_list args);
 int _putchar(char c);
 int _putstr(va_list args);
 int _putarg_char(va_list args);
+int _putper(va_list args);
 int get_len(const char *s);
 #endif /* MAIN_H */
