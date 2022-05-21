@@ -15,6 +15,8 @@ prnt_fmt prnt_f[] = {
 {"c", _putarg_char},
 {"s", _putstr},
 {"%", _putper},
+{"d", _putint},
+{"i", _putint},
 {NULL, NULL},
 };
 if (format == NULL)

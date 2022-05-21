@@ -22,5 +22,8 @@ int _putchar(char c);
 int _putstr(va_list args);
 int _putarg_char(va_list args);
 int _putper(va_list args);
+int _putint(va_list args);
+/* helper functions */
 int get_len(const char *s);
+char *rev_string(char *s);
 #endif /* MAIN_H */
