@@ -30,6 +30,7 @@ n = _printf("%i + %i = %d\n", INT_MIN, INT_MAX, (INT_MIN + INT_MAX));
 n2= printf("%i + %i = %d\n", INT_MIN, INT_MAX, (INT_MIN + INT_MAX));
 n = _printf("iddi%diddiiddi\n", 1024);
 n2 = _printf("iddi%iiddiiddi\n", 1024);
+n = _printf("%b %b\n", 1024, -1024);
 printf ("%d %d", n, n2);
 
 return (0);

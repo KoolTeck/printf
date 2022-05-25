@@ -17,6 +17,7 @@ prnt_fmt prnt_f[] = {
 {"%", _putper},
 {"d", _putint},
 {"i", _putint},
+{"b", _putbinary},
 {NULL, NULL},
 };
 if (format == NULL)
