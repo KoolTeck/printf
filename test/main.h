@@ -24,6 +24,10 @@ int _putarg_char(va_list args);
 int _putper(va_list args);
 int _putint(va_list args);
 int _putbinary(va_list args);
+int _putcap_hex(va_list args);
+int _putlow_hex(va_list args);
+int _put_unsigned(va_list args);
+int _putoct(va_list args);
 /* helper functions */
 int get_len(const char *s);
 char *rev_string(char *s);

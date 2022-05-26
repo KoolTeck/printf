@@ -18,6 +18,10 @@ prnt_fmt prnt_f[] = {
 {"d", _putint},
 {"i", _putint},
 {"b", _putbinary},
+{"o", _putoct},
+{"X", _putcap_hex},
+{"x", _putlow_hex},
+{"u", _put_unsigned},
 {NULL, NULL},
 };
 if (format == NULL)
