@@ -22,6 +22,7 @@ prnt_fmt prnt_f[] = {
 {"X", _putcap_hex},
 {"x", _putlow_hex},
 {"u", _put_unsigned},
+{"S", _put_non_printable_ascii},
 {NULL, NULL},
 };
 if (format == NULL)
